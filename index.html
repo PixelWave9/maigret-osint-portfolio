@@ -3,225 +3,318 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAIGRET MEGA ACADEMY | موسوعة الصفر إلى الاحتراف - 100% شامل</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>MAIGRET v0.5.0 - FIELD MANUAL | OSINT USERNAME HUNTING</title>
 <style>
-:root{--bg:#050712;--c1:#0F122E;--c2:#181C3F;--bd:#242A5A;--cy:#00F5FF;--gn:#00FF9D;--or:#FF7A18;--pk:#FF1E7A;--vi:#8B5CF6;--yl:#FFE600;--tx:#EAF0FF;--mu:#8A94C0}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:radial-gradient(1200px 600px at 20% -10%, rgba(0,245,255,0.15), transparent), radial-gradient(1000px 500px at 90% 0%, rgba(139,92,246,0.18), transparent), var(--bg);color:var(--tx);font-family:'Cairo',sans-serif;line-height:1.9}
-.code{font-family:'JetBrains Mono',monospace}
-.hero{max-width:1300px;margin:0 auto;padding:90px 24px 30px;text-align:center}
-.badge-hero{display:inline-flex;background:linear-gradient(90deg, rgba(0,245,255,0.15), rgba(139,92,246,0.15));border:1px solid var(--cy);border-radius:100px;padding:8px 18px;font-size:12px;font-weight:800;letter-spacing:1px;color:var(--cy)}
-.hero h1{font-size:54px;font-weight:900;line-height:1.05;margin-top:18px}
-.hero h1 .grad{background:linear-gradient(90deg,var(--cy),var(--vi),var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero .sub{max-width:860px;margin:18px auto 0;color:var(--mu);font-size:19px;font-weight:300}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:1100px;margin:34px auto 0}
-.st{border:1px solid var(--bd);background:linear-gradient(180deg,var(--c1),var(--bg));border-radius:18px;padding:16px;text-align:right}
-.st b{font-family:'JetBrains Mono';font-size:20px;display:block}
-.st span{font-size:12px;color:var(--mu)}
-.nav{max-width:1300px;margin:30px auto;padding:0 24px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.nav button{cursor:pointer;border:1px solid var(--bd);background:var(--c1);color:var(--tx);padding:10px 16px;border-radius:100px;font-family:'Cairo';font-weight:700;font-size:13px;transition:.2s}
-.nav button.active{border-color:var(--cy);color:var(--cy);box-shadow:0 0 20px rgba(0,245,255,0.3)}
-.search-wrap{max-width:700px;margin:18px auto 0;display:flex;gap:10px}
-.search-wrap input{flex:1;background:var(--c1);border:1px solid var(--bd);border-radius:14px;padding:12px 16px;color:var(--tx);font-family:'JetBrains Mono';outline:none}
-.wrap{max-width:1300px;margin:0 auto;padding:0 24px 100px}
-.module{margin-top:60px;border:1px solid var(--bd);background:linear-gradient(180deg,var(--c1),#080A1A);border-radius:30px;overflow:hidden}
-.module-h{padding:28px 30px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;background:linear-gradient(90deg, rgba(0,245,255,0.07), transparent)}
-.module-h h2{font-size:26px;font-weight:900;display:flex;align-items:center;gap:14px}
-.module-h .icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:22px;font-weight:900}
-.module-c{padding:30px}
-.grid2{display:grid;grid-template-columns:1.15fr 0.85fr;gap:20px}
-@media(max-width:1000px){.grid2{grid-template-columns:1fr}.hero h1{font-size:34px}}
-.card{border:1px solid var(--bd);background:var(--c2);border-radius:20px;padding:20px}
-.card h4{font-size:15px;font-weight:800;margin-bottom:10px}
-.card p, .card li{font-size:13.5px;color:#C8D1F0}
-.card ul{padding-right:20px}
-.term{background:#020411;border:1px solid #1C224A;border-radius:16px;overflow:hidden;margin-top:12px;direction:ltr;text-align:left}
-.term-h{background:#0A1030;padding:9px 14px;display:flex;gap:6px;align-items:center;border-bottom:1px solid var(--bd)}
-.dot{width:10px;height:10px;border-radius:50%}
-.term-body{padding:14px 16px;font-family:'JetBrains Mono';font-size:12.8px;white-space:pre-wrap;word-break:break-all;line-height:1.7;color:#A8B3DB;min-height:50px}
-.lesson{border:1px solid var(--bd);border-radius:22px;overflow:hidden;margin-top:22px;background:linear-gradient(180deg,var(--c2),var(--c1));position:relative}
-.lesson::before{content:'';position:absolute;right:0;top:0;width:5px;height:100%;background:var(--c)}
-.lesson-head{padding:16px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--bd);background:rgba(255,255,255,0.02)}
-.lesson-num{font-family:'JetBrains Mono';font-size:11px;font-weight:800;background:rgba(255,255,255,0.08);padding:4px 10px;border-radius:100px}
-.lesson-title{font-weight:800;font-size:14px;flex:1}
-.phase-badge{font-size:10px;padding:3px 10px;border-radius:100px;border:1px solid;font-weight:800}
-.lesson-body{padding:20px}
-.dual{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:900px){.dual{grid-template-columns:1fr}}
-.b-box{background:rgba(0,245,255,0.06);border:1px dashed rgba(0,245,255,0.3);border-radius:16px;padding:14px}
-.p-box{background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.35);border-radius:16px;padding:14px}
-.b-label,.p-label{font-size:11px;font-weight:800;letter-spacing:0.5px;margin-bottom:8px}
-.b-label{color:var(--cy)} .p-label{color:var(--vi)}
-.examples{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-@media(max-width:800px){.examples{grid-template-columns:1fr}}
-.ex{border:1px solid var(--bd);background:#070A1F;border-radius:14px;padding:12px}
-.ex-head{font-size:11px;color:var(--mu);display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.cp{background:var(--c1);border:1px solid var(--bd);color:var(--mu);padding:3px 8px;border-radius:8px;font-size:10px;cursor:pointer}
-.siem{margin-top:14px;background:rgba(255,30,122,0.07);border:1px solid rgba(255,30,122,0.3);border-left:3px solid var(--pk);border-radius:14px;padding:12px;font-size:12px}
-.exercise{margin-top:12px;background:rgba(255,230,0,0.06);border:1px solid rgba(255,230,0,0.25);border-radius:14px;padding:12px;font-size:12px}
-.progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--c1);z-index:999}
-.progress-i{height:100%;width:0%;background:linear-gradient(90deg,var(--cy),var(--gn));transition:width 0.3s}
-.toc{position:sticky;top:10px;z-index:10;background:rgba(5,7,18,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd);padding:10px 24px;display:flex;gap:8px;overflow:auto}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700;900&display=swap');
+:root{
+--bg:#080b10;
+--card:#11151d;
+--card2:#151b27;
+--border:#1f2937;
+--neon-green:#00ff88;
+--neon-cyan:#00e5ff;
+--neon-pink:#ff0055;
+--neon-yellow:#ffcc00;
+--neon-purple:#a855f7;
+--text:#e5e7eb;
+--text-dim:#9ca3af;
+--danger:#ff0033;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Cairo',sans-serif;overflow-x:hidden;line-height:1.8}
+.mono{font-family:'JetBrains Mono',monospace;direction:ltr}
+header{border-bottom:2px solid var(--neon-green);padding:40px 20px;background:radial-gradient(ellipse at top, rgba(0,255,136,0.15), transparent 60%), var(--bg);text-align:center;position:relative}
+header::before{content:'CLASSIFIED // OSINT FIELD MANUAL';position:absolute;top:10px;left:20px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:3px;color:var(--neon-green);opacity:0.7}
+h1{font-size:3rem;font-weight:900;letter-spacing:-1px}
+h1 span{color:var(--neon-green);text-shadow:0 0 20px rgba(0,255,136,0.5)}
+.subtitle{font-family:'JetBrains Mono';color:var(--text-dim);margin-top:10px;direction:ltr}
+.badge{display:inline-block;border:1px solid var(--border);padding:6px 12px;border-radius:999px;font-family:'JetBrains Mono';font-size:12px;margin:5px;background:var(--card)}
+.badge.green{border-color:var(--neon-green);color:var(--neon-green)}
+.badge.cyan{border-color:var(--neon-cyan);color:var(--neon-cyan)}
+.badge.pink{border-color:var(--neon-pink);color:var(--neon-pink)}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.phase{margin:50px 0;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
+.phase-header{padding:20px 25px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.phase-header h2{font-size:1.4rem;display:flex;align-items:center;gap:12px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;box-shadow:0 0 10px currentColor}
+.phase-1 .dot{background:var(--neon-cyan);color:var(--neon-cyan)}
+.phase-2 .dot{background:var(--neon-yellow);color:var(--neon-yellow)}
+.phase-3 .dot{background:var(--neon-purple);color:var(--neon-purple)}
+.phase-4 .dot{background:var(--neon-pink);color:var(--neon-pink)}
+.phase-5 .dot{background:var(--neon-green);color:var(--neon-green)}
+.phase-content{padding:0 25px 25px 25px}
+.flag-card{background:var(--card2);border:1px solid var(--border);border-left:4px solid var(--neon-green);border-radius:12px;padding:20px;margin:20px 0;position:relative}
+.flag-card.stealth{border-left-color:var(--neon-pink)}
+.flag-card.network{border-left-color:var(--neon-cyan)}
+.flag-card.filter{border-left-color:var(--neon-yellow)}
+.flag-card.output{border-left-color:var(--neon-purple)}
+.flag-title{font-family:'JetBrains Mono';font-size:1.1rem;font-weight:700;color:var(--neon-green);direction:ltr;text-align:left}
+.flag-card.stealth .flag-title{color:var(--neon-pink)}
+.flag-card.network .flag-title{color:var(--neon-cyan)}
+.flag-card.filter .flag-title{color:var(--neon-yellow)}
+.flag-card.output .flag-title{color:var(--neon-purple)}
+.op-note{background:rgba(0,255,136,0.07);border:1px dashed rgba(0,255,136,0.3);padding:12px;border-radius:8px;margin:12px 0;font-size:0.9rem}
+.op-note strong{color:var(--neon-green)}
+.section-label{font-family:'JetBrains Mono';font-size:11px;letter-spacing:2px;color:var(--text-dim);margin-top:15px;margin-bottom:5px;direction:ltr;text-align:left}
+.code-block{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px 15px;margin:8px 0;position:relative;direction:ltr;text-align:left;overflow-x:auto;font-family:'JetBrains Mono';font-size:13px}
+.code-block .copy-btn{position:absolute;top:8px;right:8px;background:var(--card);border:1px solid var(--border);color:var(--text-dim);padding:4px 8px;border-radius:6px;cursor:pointer;font-size:11px}
+.code-block .copy-btn:hover{color:var(--neon-green);border-color:var(--neon-green)}
+.alert{border:1px solid var(--danger);background:rgba(255,0,51,0.08);padding:15px;border-radius:10px;margin:20px 0}
+.final-ops{background:linear-gradient(135deg, #11151d 0%, #0f1a15 100%);border:2px solid var(--neon-green);border-radius:16px;padding:30px;margin:60px 0}
+.final-ops h2{color:var(--neon-green);font-size:2rem;text-align:center;margin-bottom:10px}
+.cmd-ready{background:#0a0e10;border:1px solid var(--border);border-radius:10px;padding:15px;margin:15px 0;position:relative}
+.cmd-ready:hover{border-color:var(--neon-green)}
+.cmd-num{position:absolute;top:-10px;right:20px;background:var(--neon-green);color:#000;font-family:'JetBrains Mono';font-weight:900;padding:2px 10px;border-radius:999px;font-size:12px}
+footer{text-align:center;padding:40px;color:var(--text-dim);font-family:'JetBrains Mono';font-size:12px;border-top:1px solid var(--border);margin-top:60px}
 </style>
 </head>
 <body>
-<div class="progress"><div class="progress-i" id="prog"></div></div>
-<div class="hero">
-  <div class="badge-hero">🏛️ MEGA ACADEMY // 100% شامل // ZERO TO HERO // 43 درس // 7 مشاريع</div>
-  <h1>من شخص يكتب <span class="grad">ما هو الهاكر؟</span><br>إلى محقق يغذي الـ SIEM</h1>
-  <div class="sub">هذه ليست وثائق. هذه موسوعة تفاعلية ضخمة. كل Flag مشروح كفصل جامعي: تعريف لطفل، تشريح نووي للـ kernel، مثالين، بصمة رصد، وتمرين. بدون اختصار. بدون تلخيص. سأخذك من الصفر حرفياً.</div>
-  <div class="stats">
-    <div class="st"><b>43 درس</b><span>كل Flag = فصل كامل</span></div>
-    <div class="st"><b>7 مستويات</b><span>من الصفر إلى Red Team</span></div>
-    <div class="st"><b>3000+ موقع</b><span>محرك aiohttp + asyncio</span></div>
-    <div class="st"><b>5 مشاريع حقيقية</b><span>مع تقارير قانونية</span></div>
-    <div class="st"><b>SIEM Ready</b><span>بصمات WAF و EDR لكل أمر</span></div>
-  </div>
+<header>
+<h1>MAIGRET <span>v0.5.0</span></h1>
+<div class="subtitle">OSINT // USERNAME HUNTING // DIGITAL FOOTPRINT RECONNAISSANCE FIELD MANUAL</div>
+<div style="margin-top:20px">
+<span class="badge green">BLACKARCH READY</span>
+<span class="badge cyan">3000+ SITES</span>
+<span class="badge pink">STEALTH MODE</span>
+<span class="badge">FOR AUTHORIZED OSINT ONLY</span>
+</div>
+<p style="max-width:800px;margin:20px auto 0 auto;color:var(--text-dim);font-size:0.95rem">هاد الأداة ماشي للعب. Maigret هو أقوى محرك بحث عن اليوزرنيم فالعالم. كيقلب على الأثر الرقمي ديالك أو ديال الهدف فأكثر من 3000 موقع. هاد الدليل غادي يعلمك كيفاش تستعمل كل أمر بلا اختصار.</p>
+</header>
+
+<div class="container">
+
+<!-- INTRO -->
+<div class="phase phase-1">
+<div class="phase-header"><h2><span class="dot"></span> 0x01 // ما هي MAIGRET وعلاش هي أخطر من Sherlock</h2></div>
+<div class="phase-content">
+<p>Maigret هي نسخة مطورة ومحسنة من Sherlock. الفرق الجوهري: كتدير Recursive Search - يعني إلا لقات بروفايل، كتجبد منو أسماء أخرى، إيميلات، ID أخرى وكتقلب عليهم أوتوماتيكيا. هادشي كيديرها سلاح استخبارات حقيقي.</p>
+<div class="op-note"><strong>OPERATOR NOTE:</strong> استعملها فقط على أهداف عندك إذن قانوني للبحث عليها، أو على راسك باش تعرف الأثر الرقمي ديالك. أي استعمال للتحرش أو المطاردة هو جريمة.</div>
+</div>
 </div>
 
-<div class="nav" id="nav">
-  <button class="active" data-f="all">الكل</button>
-  <button data-f="foundation">التأسيس</button>
-  <button data-f="engine">المحرك</button>
-  <button data-f="identity">الهوية</button>
-  <button data-f="target">الاستهداف</button>
-  <button data-f="stealth">التخفي</button>
-  <button data-f="report">التقارير</button>
-  <button data-f="projects">المشاريع</button>
+<!-- POSITIONAL -->
+<div class="phase phase-1">
+<div class="phase-header"><h2><span class="dot"></span> 0x02 // الهدف الأساسي - USERNAMES</h2></div>
+<div class="phase-content">
+<div class="flag-card">
+<div class="flag-title">USERNAMES [positional argument]</div>
+<div class="section-label">// WHAT IT DOES - للمبتدئ</div>
+<p>هذا هو الهدف. اسم المستخدم اللي بغيتي تقلب عليه. تقدر تعطي واحد أو عشرة فدقة وحدة.</p>
+<div class="section-label">// WHY USE IT</div>
+<p>بلا هادشي الأداة ما غاديش تخدم. هو نقطة البداية ديال أي عملية OSINT.</p>
+<div class="section-label">// TECHNICAL DEEP DIVE</div>
+<p>Maigret كتاخد اليوزرنيم وكتدوزو على قاعدة بيانات JSON فيها أكثر من 3000 موقع، كل موقع عندو URL pattern وطريقة كشف وجود الحساب (status_code, message, redirect). كتدير request لكل موقع وتقرر واش كاين ولا لا.</p>
+<div class="section-label">// BEGINNER EXAMPLE</div>
+<div class="code-block">maigret abhx696 <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="section-label">// ADVANCED EXAMPLE - CHAIN</div>
+<div class="code-block">maigret abhx696 john_doe_1337 elonmusk --top-sites 1000 <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="op-note"><strong>PRO TIP:</strong> بدا ديما بيوزرنيم واحد باش تفهم النتائج، من بعد دوز للبحث الجماعي.</div>
 </div>
-<div class="search-wrap"><input id="search" placeholder="ابحث عن أي Flag... مثال: tor-proxy, id-type, --json, gaia_id"></div>
-
-<div class="wrap">
-
-<!-- FOUNDATION -->
-<div class="module" data-cat="foundation">
-  <div class="module-h"><h2><span class="icon" style="background:var(--cy);color:#001419">0</span> المستوى صفر: التأسيس - لمن لا يعرف شيئاً إطلاقاً</h2></div>
-  <div class="module-c">
-    <div class="grid2">
-      <div class="card">
-        <h4>🌍 ما هو الإنترنت ببساطة؟ وما هو OSINT؟</h4>
-        <p>تخيل الإنترنت كمدينة ضخمة فيها 3000 حي (مواقع). كل شخص لديه اسم مستعار يستخدمه في كل الأحياء: <span class="code">abhx696</span>.<br><br><strong>OSINT</strong> يعني أنك لا تكسر باباً، أنت فقط تمشي في الشوارع العلنية وتسأل: هل رأيتم هذا الاسم؟ هذا قانوني 100% إذا كان الموقع علني.<br><br><strong>لماذا username خطير؟</strong> لأن الناس كسولة. تستخدم نفس الاسم ونفس الصورة ونفس كلمة المرور. إذا وجدت حساب GitHub لشخص، ستجد بريده، وإذا وجدت بريده ستجد حساباته المسربة في HaveIBeenPwned، وإذا وجدت حساباته ستجد موقعه الجغرافي من خرائط Google. سلسلة كاملة تبدأ من اسم واحد.<br><br><strong>الجانب القانوني والأخلاقي:</strong> لا تبحث عن أشخاص بدون إذن قانوني إذا كنت في شركة. استخدمه لحماية نفسك أو في تحقيقات مصرح بها. كل ما تفعله يُسجل في سجلات الخادم.</p>
-      </div>
-      <div class="card">
-        <h4>🔬 كيف يفكر المحقق المحترف؟</h4>
-        <ul>
-          <li><strong>لا تبدأ بالهجوم:</strong> ابدأ بحماية نفسك. ابحث عن اسمك أولاً.</li>
-          <li><strong>فكر كصياد بصمات:</strong> كل موقع يترك بصمة مختلفة: GitHub يكشف بريدك، Steam يكشف ألعابك وأصدقائك، Strava يكشف مسار جريك اليومي حول منزلك.</li>
-          <li><strong>لا تثق بنتيجة واحدة:</strong> موقع واحد يقول FOUND لا يعني أن الشخص هو نفسه. قارن الصور، تواريخ الإنشاء، الأسلوب.</li>
-          <li><strong>سجل كل شيء:</strong> كل تقرير HTML/PDF هو دليل قانوني. بدون تقرير، كأنك لم تفعل شيئاً.</li>
-        </ul>
-        <div class="term"><div class="term-h"><span class="dot" style="background:#FF5F56"></span><span class="dot" style="background:#FFBD2E"></span><span class="dot" style="background:#27C93F"></span><span style="margin-left:10px;font-size:11px;color:var(--mu)">مبدأ التحقيق</span></div><div class="term-body">OSINT = Open Source Intelligence
-الهدف: username واحد -> 3000 موقع -> خريطة حياة رقمية كاملة
-القاعدة الذهبية: ابحث عن نفسك قبل أن تبحث عن الآخرين</div></div>
-      </div>
-    </div>
-    <div class="card" style="margin-top:18px;border-color:var(--cy)">
-      <h4>🧩 ما الذي يحدث تحت الغطاء عندما تكتب maigret john؟ (شرح للصفر)</h4>
-      <p>1- هاتفك يفتح 100 باب في نفس اللحظة (100 اتصال).<br>2- من كل باب يصرخ: هل يوجد شخص اسمه john؟<br>3- كل موقع يرد: نعم موجود (200 OK + كلمة john في الصفحة) أو لا (404).<br>4- مايغريت يجمع الردود ويعطيك تقرير.<br><br><strong>على مستوى النواة (للمحترف):</strong> <span class="code">socket(AF_INET, SOCK_STREAM, 0) -> setsockopt(SO_RCVTIMEO, 30s) -> getaddrinfo(github.com) -> connect() -> TLS ClientHello (JA3) -> HTTP GET /john HTTP/1.1 -> epoll_wait() -> regex matching (username_claimed vs username_unclaimed)</span>. كل هذا يحدث داخل حلقة <span class="code">asyncio.EventLoop</span> بدون Threads.</p>
-    </div>
-  </div>
+</div>
 </div>
 
-<!-- ENGINE -->
-<div class="module" data-cat="engine">
-  <div class="module-h"><h2><span class="icon" style="background:var(--or);color:white">1</span> المستوى الأول: محرك البحث - التحكم في السرعة والتخفي</h2></div>
-  <div class="module-c">
+<!-- CORE OPTIONS -->
+<div class="phase phase-2">
+<div class="phase-header"><h2><span class="dot"></span> 0x03 // التحكم الأساسي - CORE NETWORK & PERFORMANCE</h2></div>
+<div class="phase-content">
 
-    <div class="lesson" data-phase="engine" style="--c:var(--cy)">
-      <div class="lesson-head">
-        <div class="lesson-num">#01</div>
-        <div class="lesson-title"><span class="code">USERNAMES</span> — الهدف - من تبحث عنه</div>
-        <div class="phase-badge" style="border-color:var(--cy);color:var(--cy)">engine</div>
-      </div>
-      <div class="lesson-body">
-        <div class="dual">
-          <div class="b-box"><div class="b-label">👶 للمبتدئ - من الصفر</div><p>هو الاسم أو الأسماء التي تريد تتبعها. مثل اسمك على انستغرام. يمكنك كتابة اسم واحد أو 50 اسم مرة واحدة. مايغريت سيبحث عن كل واحد في 3000 موقع.</p></div>
-          <div class="p-box"><div class="p-label">🥷 للمحترف - عمق نووي</div><p>وسيط موضعي يتحول إلى قائمة asyncio.Task. كل username يولد ~3000 Future object. يستهلك ~8KB لكل socket buffer (net.ipv4.tcp_rmem). يدعم Unicode و IDN homograph (مثال: аdmіn بحروف روسية تشبه admin). يتم تمريره إلى Permutator لتوليد تباديل.</p></div>
-        </div>
-        <div class="examples">
-          <div class="ex"><div class="ex-head">مثال مبتدئ <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret abhx696</div></div></div>
-          <div class="ex"><div class="ex-head">مثال محترف - سيناريو مؤسسي <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret abhx696 abhx admin_abhx john.doe --permute --top-sites 500 -fo ./intel/ --html --json simple
-# يولد 12+ تباديل ويبحث في 500 موقع ويخرج تقريرين</div></div></div>
-        </div>
-        <div class="siem"><strong>🚨 بصمة الرصد الدفاعي SIEM/EDR/IDS:</strong><br>ظهور 1000+ طلب GET لـ /abhx696 في 38 ثانية = يكتشف كـ OSINT enumeration في Zeek. Suricata SID: ET POLICY Possible Username Enumeration. استخدم --top-sites 100 لتقليل الضوضاء.</div>
-        <div class="exercise"><strong>🎯 تمرين تطبيقي:</strong> ابحث عن اسمك واسم صديقك واسم شركتك. قارن النتائج. كم حساب وجدت لكل واحد؟</div>
-      </div>
-    </div>
-    
-    <div class="lesson" data-phase="engine" style="--c:var(--or)">
-      <div class="lesson-head">
-        <div class="lesson-num">#02</div>
-        <div class="lesson-title"><span class="code">--timeout TIMEOUT</span> — التحكم في زمن الانتظار</div>
-        <div class="phase-badge" style="border-color:var(--or);color:var(--or)">engine</div>
-      </div>
-      <div class="lesson-body">
-        <div class="dual">
-          <div class="b-box"><div class="b-label">👶 للمبتدئ - من الصفر</div><p>المدة التي ينتظرها مايغريت قبل أن يقول الموقع بطيء. الافتراضي 30 ثانية. إذا كان الإنترنت ضعيف أو تستخدم Tor، اجعله 60.</p></div>
-          <div class="p-box"><div class="p-label">🥷 للمحترف - عمق نووي</div><p>يُمرر إلى aiohttp.ClientTimeout(total=). على مستوى النواة: setsockopt(SO_RCVTIMEO, timeout) و SO_SNDTIMEO. يؤثر على TCP RTO (Retransmission Timeout) - يتم حسابه عبر RTT + 4*RTTVAR. زيادة Timeout تزيد من عدد FD المفتوحة في /proc/[pid]/fd وقد تسبب استنزاف الذاكرة إذا -n كبير. في Tor، circuit build time 1-3 ثانية، لذا timeout 15 سيفشل.</p></div>
-        </div>
-        <div class="examples">
-          <div class="ex"><div class="ex-head">مثال مبتدئ <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret --timeout 60 abhx696</div></div></div>
-          <div class="ex"><div class="ex-head">مثال محترف - سيناريو مؤسسي <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret --timeout 15 --retries 2 -n 200 abhx696 --tor-proxy socks5://127.0.0.1:9050 --print-errors
-# timeout قصير + Tor = فشل مضمون. استخدم 60 مع Tor</div></div></div>
-        </div>
-        <div class="siem"><strong>🚨 بصمة الرصد الدفاعي SIEM/EDR/IDS:</strong><br>اتصالات طويلة 60s+ تظهر كـ long-lived TCP sessions في Zeek logs. قد تثير تنبيه C2 beaconing في SIEM إذا كانت كثيرة.</div>
-        <div class="exercise"><strong>🎯 تمرين تطبيقي:</strong> جرب timeout 5 ثم 60 على نفس الاسم. كم موقع فشل في كل حالة؟ سجل الفرق.</div>
-      </div>
-    </div>
-    
-    <div class="lesson" data-phase="engine" style="--c:var(--or)">
-      <div class="lesson-head">
-        <div class="lesson-num">#03</div>
-        <div class="lesson-title"><span class="code">--retries RETRIES</span> — إعادة المحاولة عند الفشل</div>
-        <div class="phase-badge" style="border-color:var(--or);color:var(--or)">engine</div>
-      </div>
-      <div class="lesson-body">
-        <div class="dual">
-          <div class="b-box"><div class="b-label">👶 للمبتدئ - من الصفر</div><p>عدد المرات التي سيحاول فيها إذا فشل الاتصال. الافتراضي 0؟ جرب 2 إذا الإنترنت ضعيف.</p></div>
-          <div class="p-box"><div class="p-label">🥷 للمحترف - عمق نووي</div><p>حلقة إعادة محاولة مع exponential backoff غير موثق. عند ClientConnectorError يتم إعادة جدولة Task في event loop مع تأخير. كل retry يستهلك DNS lookup جديد (قد يكشفك عبر DNS logs). زيادته تزيد البصمة ضد WAF وقد يؤدي لحظر IP بسبب repeated failed handshakes.</p></div>
-        </div>
-        <div class="examples">
-          <div class="ex"><div class="ex-head">مثال مبتدئ <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret --retries 3 abhx696</div></div></div>
-          <div class="ex"><div class="ex-head">مثال محترف - سيناريو مؤسسي <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret --retries 0 --print-errors abhx696 --site Instagram
-# صفر إعادة محاولة لكشف الحظر الحقيقي بسرعة، لا تضيع وقتك</div></div></div>
-        </div>
-        <div class="siem"><strong>🚨 بصمة الرصد الدفاعي SIEM/EDR/IDS:</strong><br>تكرار نفس الطلب 3 مرات لنفس URL يظهر كـ brute force في WAF logs (Cloudflare Ray ID متكرر).</div>
-        <div class="exercise"><strong>🎯 تمرين تطبيقي:</strong> ابحث عن اسم مع --retries 0 ثم --retries 3. هل زاد عدد النتائج؟</div>
-      </div>
-    </div>
-    
-    <div class="lesson" data-phase="engine" style="--c:var(--or)">
-      <div class="lesson-head">
-        <div class="lesson-num">#04</div>
-        <div class="lesson-title"><span class="code">-n, --max-connections</span> — عدد المحركات المتزامنة</div>
-        <div class="phase-badge" style="border-color:var(--or);color:var(--or)">engine</div>
-      </div>
-      <div class="lesson-body">
-        <div class="dual">
-          <div class="b-box"><div class="b-label">👶 للمبتدئ - من الصفر</div><p>عدد المواقع التي يفحصها في نفس الوقت. الافتراضي 100. 20 = هادئ ومتخفي، 300 = سريع وعدواني لكن قد يحظرونك.</p></div>
-          <div class="p-box"><div class="p-label">🥷 للمحترف - عمق نووي</div><p>يتحكم في aiohttp.TCPConnector(limit=). كل اتصال هو socket FD. عند 100 اتصال، يفتح 100 epoll event في kernel. يستهلك ~8KB لكل socket buffer. ulimit -n في Termux = 1024، لذا -n 500 قد يسبب EMFILE (Too many open files). على مستوى الشبكة: burst من 100 SYN في ثانية = يعتبر port scan من قبل IDS.</p></div>
-        </div>
-        <div class="examples">
-          <div class="ex"><div class="ex-head">مثال مبتدئ <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret -n 20 abhx696</div></div></div>
-          <div class="ex"><div class="ex-head">مثال محترف - سيناريو مؤسسي <button class="cp" onclick="copyEx(this)">نسخ</button></div><div class="term"><div class="term-body">maigret -n 300 --timeout 10 -p socks5://127.0.0.1:1080 abhx696 --no-extracting
-# عدواني عبر بروكسي دوار لتوزيع الحمل، بدون تحليل DOM لتوفير CPU</div></div></div>
-        </div>
-        <div class="siem"><strong>🚨 بصمة الرصد الدفاعي SIEM/EDR/IDS:</strong><br>300 اتصال متزامن يولد high entropy في NetFlow. يظهر في Suricata كـ ET POLICY Multiple User-Agents in short time.</div>
-        <div class="exercise"><strong>🎯 تمرين تطبيقي:</strong> جرب -n 10 و -n 200 وقس الوقت عبر time maigret ... ما الفرق؟</div>
-      </div>
-    </div>
-    
-    <div class="lesson" data-phase="engine" style="--c:var(--or)">
-      <div class="lesson-head">
-        <div class="lesson-num">#05</div>
-        <div class="lesson-title"><span class="code">--no-recursion</span> — منع البحث المتسلسل</div>
-        <div class="phase-badge" style="border-color:var(--or);color:var(--or)">engine</div>
-      </div>
-      <div class="lesson-body">
-        <div class="dual">
-          <div class="b-box"><div class="b-label">👶 للمبتدئ - من الصفر</div><p>افتراضياً إذا وجد مايغريت اسم جديد داخل صفحة (مثلاً وجد yandex ID)، سيبحث عنه أيضاً. هذا الـ Flag يمنعه. يجعل البحث أنظف.</p></div>
-          <div class="p-box"><div class="p-label">🥷 للمحترف - عمق نووي</div><p>يعطل الاستدعاء الذاتي الثاني لـ search(). افتراضياً، عند العثور على ملف، يتم استخراج IDs إضافية عبر regex. تعطيله يمنع التوسع الشبكي غير المنضبط الذي قد يتحول لـ OSINT spidering ويستهلك RAM بشكل متزايد (graph traversal).</p></div>
-        </div>
-        <div class="examples">
-          <div class="ex"><div class=
+<div class="flag-card network">
+<div class="flag-title">-h, --help</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كيوريك هاد اللائحة اللي شفتي. دليل المساعدة الخام.</p>
+<div class="code-block">maigret --help <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card network">
+<div class="flag-title">--version</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كيوريك إصدار Maigret والمكتبات اللي خدام بها.</p>
+<div class="section-label">// WHY</div>
+<p>مهم باش تعرف واش عندك آخر إصدار، حيث المواقع كتموت وكتزاد يوميا.</p>
+<div class="code-block">maigret --version <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card network">
+<div class="flag-title">--timeout TIMEOUT [default: 30s]</div>
+<div class="section-label">// WHAT IT DOES - للمبتدئ</div>
+<p>الوقت اللي كتسناه الأداة قبل ما تقول هاد الموقع ما جاوبش. إلا كان الموقع ثقيل، زيد الوقت.</p>
+<div class="section-label">// TECHNICAL DEEP DIVE</div>
+<p>كل request عندو socket timeout. إلا كان 30 ثانية بزاف قصيرة لمواقع بطيئة، غادي تعطيك False Negative. زيادة timeout كتزيد الدقة ولكن كتطول مدة الفحص.</p>
+<div class="section-label">// BEGINNER</div>
+<div class="code-block">maigret abhx696 --timeout 60 <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="section-label">// ADVANCED - SLOW TARGETS</div>
+<div class="code-block">maigret abhx696 --timeout 90 --retries 3 <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="op-note"><strong>COMMON MISTAKE:</strong> ما تديرش timeout قليل بزاف (10s) غادي تضيع بزاف ديال النتائج.</div>
+</div>
+
+<div class="flag-card network">
+<div class="flag-title">--retries RETRIES</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>شحال من مرة غادي تعاود المحاولة إلا فشل الطلب بسبب مشكل شبكة مؤقت.</p>
+<div class="code-block">maigret abhx696 --retries 2 <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret target --retries 5 --timeout 60 # عملية صبورة ضد مواقع محمية <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card network">
+<div class="flag-title">-n, --max-connections CONNECTIONS [default: 100]</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>عدد الطلبات المتزامنة. 100 تعني 100 موقع كيتقلب عليهم فنفس الوقت.</p>
+<div class="section-label">// WHY IMPORTANT</div>
+<p>إلا زدتيه بزاف (500) غادي تسرع ولكن المواقع غادي تبلوكيك وتعتبرك هجوم DDoS. إلا نقصتيه (10) غادي تكون stealth أكثر ولكن بطيء.</p>
+<div class="code-block">maigret abhx696 -n 50 # متوازن وآمن <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret abhx696 -n 10 --proxy socks5://127.0.0.1:1080 # بطيء ومتخفي <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card">
+<div class="flag-title">--no-recursion</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كتعطل أقوى ميزة ف Maigret. بلا recursion، غادي يقلب غير على اليوزرنيم اللي عطيتيه. بالـ recursion، إلا لقى بروفايل فيه يوزرنيم آخر، غادي يقلب عليه حتى هو.</p>
+<div class="section-label">// WHEN TO DISABLE</div>
+<p>إلا كنتي بغيتي نتيجة سريعة ومحددة فقط، أو إلا بغيتي تتجنب الضوضاء.</p>
+<div class="code-block">maigret abhx696 --no-recursion <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card">
+<div class="flag-title">--no-extracting</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كيمنع استخراج بيانات إضافية من صفحات البروفايل (إيميلات، أسماء حقيقية، روابط).</p>
+<div class="code-block">maigret abhx696 --no-extracting # بحث سطحي سريع <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret abhx696 # الحالة العادية - استخراج كامل للمعلومات <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card network">
+<div class="flag-title">--id-type {username, yandex_public_id, gaia_id, vk_id, ok_id, wikimapia_uid, steam_id, uidme_uguid, yelp_userid}</div>
+<div class="section-label">// WHAT IT DOES - مهم جدا</div>
+<p>ماشي ديما كنقلبو بيوزرنيم. مرات كيكون عندك ID ديال Google (gaia_id) أو VK أو Steam. هاد الأمر كيقول ل Maigret نوع المعرف اللي عندك.</p>
+<div class="section-label">// BEGINNER</div>
+<div class="code-block">maigret 123456789 --id-type gaia_id # البحث ب Google ID <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="section-label">// ADVANCED</div>
+<div class="code-block">maigret 76561198123456789 --id-type steam_id --all-sites <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card">
+<div class="flag-title">--permute</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>إلا عطيتيه جوج يوزرنيم أو أكثر، غادي يولد تركيبات جديدة منهم. مثلا abhx + 696 = abhx696, 696abhx, abhx_696...</p>
+<div class="code-block">maigret abhx 696 --permute <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret john doe --permute --top-sites 500 # توليد كل الاحتمالات <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card network">
+<div class="flag-title">--db DB_FILE</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كتقدر تحمل قاعدة بيانات مواقع مخصصة ديالك من ملف JSON أو من رابط HTTP. مفيد إلا بغيتي تزيد مواقع خاصة بشركة أو دولة معينة.</p>
+<div class="code-block">maigret abhx696 --db ./my_custom_sites.json <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret abhx696 --db https://raw.githubusercontent.com/soxoj/maigret/main/maigret/resources/data.json <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card stealth">
+<div class="flag-title">--cookies-jar-file COOKIE_FILE</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كتستعمل ملف كوكيز باش تدخل لمواقع كتطلب تسجيل دخول. بلا كوكيز، بزاف المواقع ما كتعطيش نتيجة صحيحة.</p>
+<div class="code-block">maigret abhx696 --cookies-jar-file cookies.txt <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card">
+<div class="flag-title">--ignore-ids IGNORED_IDS</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كتقول ليه تجاهل هاد اليوزرنيم أو ID فالبحث التكراري. باش ما يبقاش يدور فحلقة مفرغة.</p>
+<div class="code-block">maigret abhx696 --ignore-ids admin,root,test <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card output">
+<div class="flag-title">--folderoutput, -fo PATH</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>إلا قلبتي على بزاف ديال اليوزرنيم، النتائج غادي تتخزن فهاد المجلد، كل واحد فملف بوحدو.</p>
+<div class="code-block">maigret user1 user2 user3 -fo ./results/ <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card stealth">
+<div class="flag-title">--proxy, -p PROXY_URL | --tor-proxy | --i2p-proxy</div>
+<div class="section-label">// WHAT IT DOES - أخطر أوامر التخفي</div>
+<p>هادو هما أوامر التخفي الحقيقي. --proxy كتدوز كل الترافيك عبر بروكسي. --tor-proxy كتستعمل شبكة Tor باش تخفي الهوية ديالك. --i2p-proxy لشبكة I2P.</p>
+<div class="section-label">// BEGINNER - TOR</div>
+<div class="code-block">maigret abhx696 --tor-proxy socks5://127.0.0.1:9050 <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="section-label">// ADVANCED - ROTATING PROXY</div>
+<div class="code-block">maigret abhx696 -p socks5://127.0.0.1:1080 -n 20 --timeout 90 # بطيء ولكن لا يمكن تتبعه <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="op-note"><strong>OPERATOR WARNING:</strong> ما تخدمش بلا بروكسي إلا كنتي كتقلب على راسك. فعمليات حقيقية، ديما استعمل Tor.</div>
+</div>
+
+<div class="flag-card">
+<div class="flag-title">--with-domains</div>
+<div class="section-label">// WHAT IT DOES - تجريبي</div>
+<p>ميزة تجريبية كتقلب واش كاين دومينات مسجلة بنفس اسم اليوزرنيم. مثلا abhx696.com</p>
+<div class="code-block">maigret abhx696 --with-domains <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card output">
+<div class="flag-title">--reports-sorting {default, data}</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كيفاش غادي يترتبو النتائج فالتقارير. default = حسب الترتيب اللي تلقاو فيه. data = حسب كمية البيانات اللي تلقات.</p>
+<div class="code-block">maigret abhx696 --reports-sorting data -H <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+</div>
+</div>
+
+<!-- SITE FILTERING -->
+<div class="phase phase-3">
+<div class="phase-header"><h2><span class="dot"></span> 0x04 // فلترة الأهداف - SITE FILTERING</h2></div>
+<div class="phase-content">
+
+<div class="flag-card filter">
+<div class="flag-title">-a, --all-sites</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كيقلب فجميع المواقع اللي كاينة فقاعدة البيانات (أكثر من 3000). بطيء جدا ولكن شامل.</p>
+<div class="code-block">maigret abhx696 -a <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="op-note"><strong>PRO TIP:</strong> ما تستعملوش فالبداية. بدا بـ --top-sites 500 ومن بعد إلا ما لقيتي والو دوز لـ -a.</div>
+</div>
+
+<div class="flag-card filter">
+<div class="flag-title">--top-sites N [default: 500]</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كيقلب غير فأشهر N موقع حسب ترتيب Alexa. 500 هو الافتراضي ومتوازن.</p>
+<div class="code-block">maigret abhx696 --top-sites 100 # سريع جدا للاختبار <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret abhx696 --top-sites 1000 # تغطية واسعة <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card filter">
+<div class="flag-title">--tags TAGS</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كتفلتر المواقع حسب النوع. مثلا كتبغي غير مواقع التواصل، أو منتديات، أو مواقع إباحية، أو ألعاب...</p>
+<div class="section-label">// HOW TO KNOW TAGS</div>
+<p>استعمل --stats باش تشوف جميع الـ tags المتاحة.</p>
+<div class="code-block">maigret abhx696 --tags social,photo # غير انستا وتيك توك وفيسبوك <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret abhx696 --tags dating,porn # للتحقيقات الحساسة <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret abhx696 --tags gaming,code # للهاكرز والمبرمجين <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card filter">
+<div class="flag-title">--site SITE_NAME [multiple]</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كتحدد مواقع بعينها فقط. تقدر تستعملو بزاف ديال المرات.</p>
+<div class="code-block">maigret abhx696 --site GitHub --site Instagram --site Twitter <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret abhx696 --site "Reddit" --site "TikTok" --site "Spotify" <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+<div class="flag-card filter">
+<div class="flag-title">--use-disabled-sites</div>
+<div class="section-label">// WHAT IT DOES</div>
+<p>كاين مواقع معطلة فالقاعدة حيث كتعطي نتائج كاذبة بزاف. هاد الأمر كيرجعها للخدمة. خطر - كيزيد False Positives.</p>
+<div class="code-block">maigret abhx696 --use-disabled-sites --top-sites 1000 <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+</div>
+
+</div>
+</div>
+
+<!-- OPERATING MODES -->
+<div class="phase phase-4">
+<div class="phase-header"><h2><span class="dot"></span> 0x05 // أوضاع العمليات الخاصة - OPERATING MODES</h2></div>
+<div class="phase-content">
+
+<div class="flag-card">
+<div class="flag-title">--parse URL</div>
+<div class="section-label">// WHAT IT DOES - سلاح قوي</div>
+<p>كتعطيه رابط بروفايل (مثلا رابط انستغرام)، وهو كيستخرج منو اليوزرنيم وكل الـ IDs اللي كاينين فالصفحة ويبدا يقلب عليهم.</p>
+<div class="code-block">maigret --parse https://www.instagram.com/abhx696/ <button class="copy-btn" onclick="copy(this)">COPY</button></div>
+<div class="code-block">maigret --parse https://twitter.com/elonmusk # استخراج كل ش
